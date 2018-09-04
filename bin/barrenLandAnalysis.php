@@ -19,6 +19,8 @@ var_dump($set1);
 $array1 = explode(" ", $set1);
 var_dump($array1);
 
+// for each over these to cast them as ints
+
 // explode the sting on a space character
 
 // cast each value as an int
