@@ -19,4 +19,5 @@ $set1 = readline('Enter Coordinates using the format \'X1, Y1, X2, Y2\' : ');
 $coordinateArray = $formattingUtility->formatInputArray($set1);
 
 $barrenLand1 = new BarrenLand($coordinateArray);
+$fertileLand1;
 echo $barrenLand1->area . PHP_EOL;

@@ -20,10 +20,10 @@ class LandClass
 
     const TOTAL_AREA_END_COORDINATE_2 = 599;
 
-    public function __con
-
     /**
-     * calculate the total area of a barren rectangle
+     * @param $length1
+     * @param $length2
+     * @return float|int
      */
     function barrenRectangleArea($length1, $length2)
     {

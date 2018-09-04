@@ -12,6 +12,28 @@ namespace BarrenLandAnalysis;
 class BaseClass
 {
     /**
+     *
+     */
+    const TOTAL_AREA_START_X = 0;
+
+    /**
+     *
+     */
+    const TOTAL_AREA_START_Y = 0;
+
+    /**
+     *
+     */
+    const TOTAL_AREA_END_X = 399;
+
+    /**
+     *
+     */
+    const TOTAL_AREA_END_Y = 599;
+
+
+
+    /**
      * @param $startCoordinate integer
      * @param $endCoordinate integer
      * @return mixed
