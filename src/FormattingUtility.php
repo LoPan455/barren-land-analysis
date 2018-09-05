@@ -9,31 +9,35 @@
 namespace BarrenLandAnalysis;
 
 
+/**
+ * Class FormattingUtility
+ *
+ * @package BarrenLandAnalysis
+ */
 class FormattingUtility
 {
+    const VALUE_DELIMITER = " ";
 
     /**
+     * Converts user input into an associative array of coordinates
+     *
      * @param $inputString
      * @return array
      */
     public function formatInputArray($inputString)
     {
-
         // create a standard php array from the input string
-        $inputArray = explode(" ", $inputString);
+        $inputArray = $this->buildArrayFromUserInput($inputString);
 
         // initialize an empty array to hold the formatted values
-        $coordinateArray = array();
+        $coordinateArray = array('x1' => null, 'y1' => null, 'x2' => null, 'y2' => null);
 
-        foreach($inputArray as $input) {
-            // convert the input value to an integer
-            $input = (int) $input;
+        // add appropriate values into the coordinate array
+         $coordinateArray['x1'] = $inputArray[0];
+         $coordinateArray['y1'] = $inputArray[1];
+         $coordinateArray['x2'] = $inputArray[2];
+         $coordinateArray['y2'] = $inputArray[3];
 
-            //  push the converted value into an array of x,y coordinates
-            array_push($coordinateArray, $input);
-        }
-
-        var_dump($coordinateArray);
         // return the array
         return $coordinateArray;
     }
@@ -44,8 +48,7 @@ class FormattingUtility
      */
     public function buildArrayFromUserInput($inputString)
     {
-        $inputArray = explode(" ", $inputString);
+        $inputArray = explode(self::VALUE_DELIMITER, $inputString);
         return $inputArray;
     }
-
 }

@@ -65,19 +65,13 @@ class FertileLand extends BaseClass
     /**
      * @param $length1
      * @param $length2
-     * @return float|int|null
      */
     private function calculateFertileLengthFromCoordinates($length1, $length2)
     {
-        $area = null;
-        $length = self::TOTAL_AREA_END_X - $length1;
-        $width = self::TOTAL_AREA_END_Y - $length2;
-
-        $area = $length * $width;
-
-        return $area;
-
 
     }
+
+    // we already know the length of the barren rectangle.  We also know the length of the area, so, we just match the length of one side of
+    // the barren area and subtract it from the total length of the field.
 
 }

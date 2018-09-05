@@ -14,22 +14,27 @@ class BarrenLand extends BaseClass
     /**
      * @var integer
      */
-    public $startX;
+    public $x1;
 
     /**
      * @var integer
      */
-    public $startY;
+    public $y1;
 
     /**
      * @var integer
      */
-    public $endX;
+    public $x2;
 
     /**
      * @var integer
      */
-    public $endY;
+    public $y2;
+
+    /**
+     *
+     */
+    public $coordinateSet;
 
     /**
      * @var integer
@@ -46,25 +51,20 @@ class BarrenLand extends BaseClass
      */
     public $length2;
 
-
     /**
      * BarrenLand constructor.
      * @param $coordinateArray
      */
     public function __construct($coordinateArray)
     {
-        $this->startX = $coordinateArray[0];
-        $this->startY = $coordinateArray[1];
-        $this->endX = $coordinateArray[2];
-        $this->endY = $coordinateArray[3];
-        $this->length1 = $this->getLength($this->startX, $this->endX);
-        $this->length2 = $this->getLength($this->startY, $this->endY);
+        $this->x1 = $coordinateArray['x1'];
+        $this->y1 = $coordinateArray['x2'];
+        $this->x2 = $coordinateArray['x2'];
+        $this->y2 = $coordinateArray['y2'];
+        $this->length1 = $this->getLength($this->x1, $this->x2);
+        $this->length2 = $this->getLength($this->y1, $this->y2);
         $this->area = $this->getArea($this->length1, $this->length2);
-
+        $this->coordinateSet = ['x1' => $this->x1, 'y1' => $this->y1, 'x2' => $this->x2, 'y2' => $this->x2];
     }
 
-    private function calculateBarrenArea()
-    {
-
-    }
 }
