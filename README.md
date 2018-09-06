@@ -1,3 +1,28 @@
+Pre-Requisites:
+
+PHP installed on the local system from which this app will run
+
+To install:
+
+Run the following commands in a macOS or linux terminal session:
+
+`git clone https://github.com/LoPan455/barren-land-analysis.git`
+
+To run the application
+
+`php bin/barrenLandAnalysis.php`
+
+Follow the prmompts to enter one or more sets of coordinates in the formL
+
+`x1 y1 x1 x2`
+
+Separate multiple data sets by a comma:
+
+`x1 y1 x2 y2,x1 x1 y1 x2 y2`
+
+
+
+
 # barren-land-analysis
 
 You have a farm of 400m by 600m where coordinates of the field are from (0, 0) to (399,
