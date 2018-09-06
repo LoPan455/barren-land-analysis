@@ -21,6 +21,7 @@ class LandClass
     const TOTAL_AREA_END_COORDINATE_2 = 599;
 
     /**
+     * Calculates the total area of the field
      * @param $length1
      * @param $length2
      * @return float|int
@@ -32,15 +33,10 @@ class LandClass
         return $area;
     }
 
+
     /**
+     *  Calculates a length by coordinates
      *
-     */
-    function totalLandArea()
-    {
-
-    }
-
-    /**
      * @param $startCoordinate
      * @param $endCoordinate
      * @return mixed

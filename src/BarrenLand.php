@@ -8,7 +8,12 @@
 
 namespace BarrenLandAnalysis;
 
-
+/**
+ * Class for a rectangle of Barren Land
+ *
+ * Class BarrenLand
+ * @package BarrenLandAnalysis
+ */
 class BarrenLand extends BaseClass
 {
     /**
@@ -32,7 +37,7 @@ class BarrenLand extends BaseClass
     public $y2;
 
     /**
-     *
+     * @var array
      */
     public $coordinateSet;
 

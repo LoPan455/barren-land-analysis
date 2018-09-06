@@ -12,6 +12,8 @@ namespace BarrenLandAnalysis;
 class BaseClass
 {
     /**
+     * Returns a length based on two coordinates
+     *
      * @param $startCoordinate integer
      * @param $endCoordinate integer
      * @return mixed
@@ -25,6 +27,8 @@ class BaseClass
     }
 
     /**
+     *  Returns the area of a rectangle
+     *
      * @param $length1 integer
      * @param $length2 integer
      * @return float|int

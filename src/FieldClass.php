@@ -8,7 +8,12 @@
 
 namespace BarrenLandAnalysis;
 
-
+/**
+ * This class describes the overall field size
+ *
+ * Class FieldClass
+ * @package BarrenLandAnalysis
+ */
 class FieldClass extends BaseClass
 {
     /**

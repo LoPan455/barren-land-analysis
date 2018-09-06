@@ -14,7 +14,7 @@ namespace BarrenLandAnalysis;
  *
  * @package BarrenLandAnalysis
  */
-class FormattingUtility
+class Utility
 {
     const VALUE_DELIMITER = " ";
 
@@ -43,6 +43,8 @@ class FormattingUtility
     }
 
     /**
+     * Builds a PHP array from user input string
+     *
      * @param $inputString
      * @return array
      */
@@ -50,5 +52,44 @@ class FormattingUtility
     {
         $inputArray = explode(self::VALUE_DELIMITER, $inputString);
         return $inputArray;
+    }
+
+    /**
+     * If either the starting and ending points on either the X or Y axis are equal, we know the barren land will bisect the field
+     *
+     * @param $barrenLand BarrenLand
+     * @param $field FieldClass
+     * @return bool
+     */
+    public function checkForBisection($barrenLand, $field)
+    {
+        $bisect = false;
+        $intersection = array_intersect_assoc($barrenLand->coordinateSet, $field->coordinateSet);
+        var_dump($intersection);
+
+        // find the matched coordinates
+        $matches = array_keys($intersection);
+
+
+        // check to see if they are along the same axis
+        if (count($matches) == 2) {
+            // if there is a match, we know the axis on which the fertile field is bisected
+            $bisect = true;
+        }
+
+        return $bisect;
+
+    }
+
+    /**
+     * Parses user input string into discrete data sets
+     *
+     * @param $string
+     * @return array
+     */
+    public function collectCoordinateSets($string)
+    {
+        $sets = explode(",", $string);
+        return $sets;
     }
 }
